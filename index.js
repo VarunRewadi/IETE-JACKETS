@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
             console.error(err);
             res.status(500).send("Database error");
         } else {
-            res.render('index', { members: rows });
+            res.render('./views/index.ejs', { members: rows });
         }
     });
 });
